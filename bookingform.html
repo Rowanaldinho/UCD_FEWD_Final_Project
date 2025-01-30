@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/CSS/main.css">
+  <link rel="stylesheet" href="/CSS/bookingform.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Flavour & Finesse</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/Index.html">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="/bookingform.html">Book a table</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="main-container">
+    <div class="box"><img src="/Images/Restaurant_Table.png"></div>
+    <div class="box">
+      <div class="booking-container">
+        <form id="bookingForm">
+          <h1 class="booking-title">Book a Table</h1>
+          <label for="name">Name:</label>
+          <input type="text" id="name" required><br>
+  
+          <label for="email">Email:</label>
+          <input type="email" id="email" required><br>
+  
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" required><br>
+  
+          <label for="date">Date:</label>
+          <input type="date" id="date" required><br>
+  
+          <label for="time">Time:</label>
+          <input type="time" id="time" required><br>
+  
+          <label for="guests">Number of Guests:</label>
+          <input type="number" id="guests" min="1" required><br>
+  
+          <button type="submit">Book Now</button>
+        </form>
+        <div id="confirmation" style="display:none;">
+          <h2>Booking Confirmation</h2>
+          <p id="confirmationMessage"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent form from submitting normally
+    
+        // Collect form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+        const guests = document.getElementById('guests').value;
+    
+        // Send data to server
+        fetch('/send-booking-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email, phone, date, time, guests })
+        })
+        .then(response => response.text())
+        .then(message => {
+            document.getElementById('confirmationMessage').innerText = message;
+            document.getElementById('confirmation').style.display = 'block';
+        })
+        .catch(error => console.error('Error:', error));
+    });
+    </script>
+</body>
+<footer>
+  <div class="footer-container">
+    <div class="footer-column"> 
+      <h1>Flavour & Finesse</h1>
+    </div> 
+    
+    <div class="footer-column"> 
+      <h4>Opening hours:</h4> 
+      <p>Monday – Thursday: 8:30am – 4:30pm
+        Friday & Saturday: 8:30am – 4:00pm & 5:30pm – 10:00pm</p>
+    </div> 
+              
+    <div class="footer-column"> 
+      <h4>Contact Us</h4> 
+      <p>Email: <a href="mailto:rowan.dardis@outlook.com">rowan.dardis@outlook.com</a></p> 
+      <p>Phone: 01234 567890</p> 
+    </div>
+ 
+  </div>
+</footer>
+</html>
