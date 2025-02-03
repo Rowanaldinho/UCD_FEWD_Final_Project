@@ -1,0 +1,103 @@
+body {
+  background-color: black !important;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.box {
+  font-size: large;
+  text-align: center;
+  font-weight: bold;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+}
+
+.booking-title {
+  margin-bottom: 20px;
+  color: rgb(241, 10, 191) !important;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.booking-container {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  min-height: 100vh;
+  margin: 0 !important;
+  flex-direction: column;
+}
+
+.booking-container button {
+  background-color: rgb(241, 10, 191) !important;
+  color: white !important;
+  padding: 10px 20px !important;
+  border: none !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 90%;
+}
+
+form label {
+  color: rgb(241, 10, 191) !important;
+  text-align: left;
+}
+
+a {
+  text-decoration: none !important;
+  color: white;
+}
+
+@media (max-width: 1078px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+
+  
+  .main-container .box:first-child {
+    display: none;
+  }
+
+  .booking-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .box img {
+    max-width: 100%; 
+  }
+
+  form {
+    width: 80%;
+  }
+
+  .footer-container { 
+    display:grid; 
+    grid-template-columns: repeat(1, 1fr);
+
+  }  
+}
+
+
+
+
+
+
+
+
