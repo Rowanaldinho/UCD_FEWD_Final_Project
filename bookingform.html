@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <title>Document</title>
+  <title>Flavour & Finesse</title>
 </head>
 <body>
   <nav class="navbar navbar-default">
@@ -26,10 +26,10 @@
     </div>
   </nav>
   <div class="main-container">
-    <div class="box"><img src="/Images/Restaurant_Table.png"></div>
+    <div class="box"><img src="/Images/Restaurant_Table.png"alt="Restaurant Table"></div>
     <div class="box">
       <div class="booking-container">
-        <form id="bookingForm">
+        <form id="bookingForm" method="post" action="http://localhost:5000/send-booking-email">
           <h1 class="booking-title">Book a Table</h1>
           <label for="name">Name:</label>
           <input type="text" id="name" required><br>
@@ -58,34 +58,7 @@
       </div>
     </div>
   </div>
-  <script>
-    document.getElementById('bookingForm').addEventListener('submit', function(event) {
-        event.preventDefault();  // Prevent form from submitting normally
-    
-        // Collect form data
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const date = document.getElementById('date').value;
-        const time = document.getElementById('time').value;
-        const guests = document.getElementById('guests').value;
-    
-        // Send data to server
-        fetch('/send-booking-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ name, email, phone, date, time, guests })
-        })
-        .then(response => response.text())
-        .then(message => {
-            document.getElementById('confirmationMessage').innerText = message;
-            document.getElementById('confirmation').style.display = 'block';
-        })
-        .catch(error => console.error('Error:', error));
-    });
-    </script>
+  <script src="/JS/bookingform.js"></script>
 </body>
 <footer>
   <div class="footer-container">

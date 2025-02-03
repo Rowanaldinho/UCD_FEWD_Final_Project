@@ -31,9 +31,18 @@ body {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  height: 100vh !important;
+  height: 80vh !important;
   margin: 0 !important;
   flex-direction: column;
+}
+
+.booking-container button {
+  background-color: rgb(241, 10, 191) !important;
+  color: white !important;
+  padding: 10px 20px !important;
+  border: none !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
 }
 
 form {
