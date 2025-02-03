@@ -13,11 +13,13 @@ body {
   font-size: large;
   text-align: center;
   font-weight: bold;
+  max-height: 800px;
+  object-fit: cover;
 }
 
 .box img {
-  width: 100%;
-  height: auto;
+max-height: 800px;
+object-fit: cover;
 }
 
 .booking-title {
