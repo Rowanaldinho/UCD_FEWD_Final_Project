@@ -27,6 +27,7 @@ object-fit: cover;
   color: rgb(241, 10, 191) !important;
   font-weight: bolder;
   text-align: center;
+  font-family: "Sofia", sans-serif !important;
 }
 
 .booking-container {
