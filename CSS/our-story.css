@@ -14,7 +14,7 @@ h1 {
 }
 
 .story-row-1, .story-row-3 {
-  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr;
   justify-content: right;
   margin-right: 40px;
   padding: 20px;
@@ -38,4 +38,4 @@ h1 {
 
 .story-image {
   grid-column: 2 / 3;
-}
+ }

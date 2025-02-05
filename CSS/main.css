@@ -49,9 +49,15 @@ body {
   display: inline-block; /* Keeps background only behind text */
 }
 
-.carousel-caption h5, .carousel-caption h2 {
+.carousel-caption h2 {
   font-size: 2rem; /* Larger font for headings */
   font-weight: bold;
+}
+
+.carousel-caption h5 {
+  font-size: 2rem; /* Larger font for headings */
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace !important;
 }
 
 .carousel-caption p {
