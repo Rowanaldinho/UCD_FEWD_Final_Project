@@ -1,0 +1,19 @@
+h2 {
+  font-family: "Sofia", sans-serif !important;
+  color:rgb(241, 10, 191) !important;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.678);
+}
+
+h5 {
+  color: rgb(241, 10, 191) !important;
+  font-family: "Sofia", sans-serif !important;
+}
+
+.card-body {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  margin: 5px;
+}

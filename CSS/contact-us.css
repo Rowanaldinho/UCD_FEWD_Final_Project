@@ -3,7 +3,8 @@ h1 {
   font-family: "Sofia", sans-serif !important;
 }
 
-p {
+.contact-container p {
+  font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.678);
 }
 

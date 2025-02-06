@@ -51,16 +51,17 @@ app.post('/send-booking-email', async (req, res) => {
     };
 
     try {
-        // Send email to restaurant owner
         await sgMail.send(msgToOwner);
-        // Send confirmation email to user
-        await sgMail.send(msgToUser);
-        res.status(200).send("Booking email sent successfully!");
+        //await sgMail.send(msgToUser);
+        res.status(200).send("Booking email sent successfully!2");
     } catch (error) {
         console.error("Error sending email:", error.response ? error.response.body : error.message);
-        res.status(500).send("Error sending email.");
+        res.status(500).json({
+            message: "Error sending email.",
+            error: error.response ? error.response.body : error.message
+        });
     }
-});
+}); 
 
 app.listen(5000, () => {
     console.log('Server running on port 5000');

@@ -98,7 +98,7 @@ footer {
 
 .footer-container { 
   display:grid; 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 2fr 2fr 1fr 1fr;
   grid-gap: 20px;
   padding: 20px;
   justify-content:center; 
