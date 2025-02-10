@@ -52,8 +52,8 @@ app.post('/send-booking-email', async (req, res) => {
 
     try {
         await sgMail.send(msgToOwner);
-        //await sgMail.send(msgToUser);
-        res.status(200).send("Booking email sent successfully!2");
+        await sgMail.send(msgToUser);
+        res.status(200).send("Booking email sent successfully!");
     } catch (error) {
         console.error("Error sending email:", error.response ? error.response.body : error.message);
         res.status(500).json({

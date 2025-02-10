@@ -4,7 +4,7 @@ h2 {
 }
 
 p {
-  color: rgba(255, 255, 255, 0.678);
+  color: rgba(255, 255, 255, 0.678) !important;
 }
 
 h5 {
@@ -12,8 +12,13 @@ h5 {
   font-family: "Sofia", sans-serif !important;
 }
 
+.card {
+  background-color: black !important; 
+  border: none; 
+}
+
 .card-body {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: black !important; 
   border-radius: 10px;
   margin: 5px;
 }
