@@ -59,54 +59,55 @@ h1 {
   grid-column: 3 / 4;
  }
 
+ /* text and images will not be visible when page initially loads */
  .story-text, .story-image, 
  .chef-text, .chef-image, 
  .fresh-produce-text, .fresh-produce-image {
    opacity: 0;
  }
  
- /* Animation for text elements (fade-in from left) */
- .story-text, .chef-text, .fresh-produce-text {
+ /* Animation: Text and image in left columns will fade in from the left of the webpage */
+ .story-text, .chef-image, .fresh-produce-text {
    transform: translateX(-50px);
    animation: fadeInLeft 1s ease-out forwards;
  }
  
- /* Animation for image elements (fade-in from right) */
- .story-image, .chef-image, .fresh-produce-image {
+ /* Animation: Text and image elements in right hand columns will fade-in from the right of the webpage */
+ .story-image, .chef-text, .fresh-produce-image {
    transform: translateX(50px);
    animation: fadeInRight 1s ease-out forwards;
  }
  
  @keyframes fadeInLeft {
    from {
-     opacity: 0;
-     transform: translateX(-50px);
+     opacity: 0; /* Start with text and image invisible */
+     transform: translateX(-50px); /* Move text and image 50px to the left */
    }
    to {
-     opacity: 1;
-     transform: translateX(0);
+     opacity: 1; /* End with text and image visible */
+     transform: translateX(0); /* Move text and image back to their original position */
    }
  }
  
  @keyframes fadeInRight {
    from {
-     opacity: 0;
-     transform: translateX(50px);
+     opacity: 0; /* Start with text and image invisible */
+     transform: translateX(50px); /* Move text and image 50px to the right */
    }
    to {
-     opacity: 1;
-     transform: translateX(0);
+     opacity: 1; /* End with text and image visible */
+     transform: translateX(0); /* Move text and image back to their original position */
    }
  }
  
  /* Staggered effect for each row */
  .story-row-1 .story-text, .story-row-2 .chef-text, .story-row-3 .fresh-produce-text {
-   animation-delay: 0.2s;
- }
- 
- .story-row-1 .story-image, .story-row-2 .chef-image, .story-row-3 .fresh-produce-image {
-   animation-delay: 0.4s;
- }
+  animation-delay: 0.2s;
+}
+
+.story-row-1 .story-image, .story-row-2 .chef-image, .story-row-3 .fresh-produce-image {
+  animation-delay: 0.4s;
+}
 
 
  @media (max-width: 768px) {

@@ -20,6 +20,8 @@ body {
 .box img {
 max-height: 800px;
 object-fit: cover;
+width: 100%;
+height: auto;
 }
 
 .booking-title {
@@ -31,24 +33,31 @@ object-fit: cover;
 }
 
 .booking-container {
-  display: flex !important;
+  display: flex;
   justify-content: flex-start !important;
   align-items: center !important;
-  min-height: 100vh;
   margin: 0 !important;
   flex-direction: column;
 }
 
 .booking-container button {
-  background-color: rgb(241, 10, 191) !important;
-  color: white !important;
-  padding: 10px 20px !important;
-  border: none !important;
-  border-radius: 10px !important;
-  cursor: pointer !important;
-  transform: translateY(3px) !important;
-  transform: scale(0.95) !important;
-  transition: all 0.2s ease-in-out;
+  background-color: rgb(241, 10, 191);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out; /* Add smooth transition effect */
+}
+
+/* Button Press Effect */
+.booking-container button:active {
+  transform: scale(0.9); /* Slight shrink effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) inset; /* Inner shadow effect */
+  background-color: rgba(255, 255, 255, 0.678); /*Change button colour to grey*/
+  color: rgb(241, 10, 191); /* Flip text color to pink */
 }
 
 form {
@@ -92,10 +101,6 @@ p {
   .booking-container {
     flex-direction: column;
     padding: 10px;
-  }
-
-  .box img {
-    max-width: 100%; 
   }
 
   form {

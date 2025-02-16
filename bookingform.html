@@ -41,28 +41,28 @@
     </div>
   </nav>
   <div class="main-container">
-    <div class="box"><img src="/Images/Restaurant_Table.png"alt="Restaurant Table"></div>
+    <div class="box"><img src="/Images/Restaurant_Table.png"alt="Restaurant table with place settings and 4 clean empty wineglasses. Restaurant guests in background"></div>
     <div class="box">
       <div class="booking-container">
         <form id="bookingForm" method="post" action="http://localhost:5000/send-booking-email">
           <h1 class="booking-title">Book a Table</h1>
           <label for="name">Name:</label>
-          <input type="text" id="name" required><br>
+          <input type="text" id="name" name="name" required><br>
   
           <label for="email">Email:</label>
-          <input type="email" id="email" required><br>
+          <input type="email" id="email" name="email" required><br>
   
           <label for="phone">Phone:</label>
-          <input type="tel" id="phone" required><br>
+          <input type="tel" id="phone" name="phone" required><br>
   
           <label for="date">Date:</label>
-          <input type="date" id="date" required><br>
+          <input type="date" id="date" name="date" required><br>
   
           <label for="time">Time:</label>
-          <input type="time" id="time" required><br>
+          <input type="time" id="time" name="time" required><br>
   
           <label for="guests">Number of Guests:</label>
-          <input type="number" id="guests" min="1" required><br>
+          <input type="number" id="guests" name="guests" min="1" required><br>
   
           <button type="submit">Book Now</button>
         </form>

@@ -13,12 +13,18 @@ h5 {
 }
 
 .card {
-  background-color: black !important; 
+  background-color: #111 !important; 
+  border-radius: 15px;
   border: none; 
+}
+
+.card:hover {
+  transform: scale(1.05); /* Makes the card pop out when mouse arrow hovers over it*/
 }
 
 .card-body {
   background-color: black !important; 
   border-radius: 10px;
   margin: 5px;
+  padding: 10px;
 }
