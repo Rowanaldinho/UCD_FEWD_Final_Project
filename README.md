@@ -13,7 +13,7 @@ Features
 - Menu Page that dynamically displays menu items using the MealsDB API.
 - Book a Table form that captures user details and sends reservation requests.
 - Nodemailer integration to send booking details via email.
-- SendGrid as the email service provider.
+- Gmail as the email service provider.
 - Automatic confirmation email sent to the user upon successful form submission.
 
 Technologies Used
@@ -21,7 +21,7 @@ Technologies Used
 - Bootstrap 5.3.3 for styling and layout.
 - Node.js & Express.js for the backend server.
 - Nodemailer for handling emails.
-- SendGrid as the email platform.
+- Gmail as the email platform.
 - MealsDB API for fetching menu items dynamically.
 
 Menu Page and MealsDB API Integration
@@ -41,7 +41,7 @@ Book a table
   2. Upon submission, the details added to the form by the user are emailed to the Restaurant Manager. e.g. name, email address, phone number, number of people, date and time
   3. The user receives a confirmation email.
 
-  The backend (server.js) handles the email process using Nodemailer and SendGrid.
+  The backend (server.js) handles the email process using Nodemailer and Gmail.
 
   Booking Form Workflow:
 
@@ -63,13 +63,20 @@ Prerequisites
 Steps to Run the Project
 
 1. Clone the repository https://github.com/Rowanaldinho/UCD_FEWD_Final_Project.git 
-2. Install depencies i.e. node.js, bootstrap 5.3.3, nodemailer
-3. Configure SendGrid API
-    - Sign up for a SendGrid account
-    - Generate an API key from the SendGrid dashboard.
-    - Create a .env file in the project root and add:
-        -- SENDGRID_API_KEY=your_sendgrid_api_key
-        -- RESTAURANT_MANAGER_EMAIL=your_restaurant_manager_email
+2. Install dependencies i.e. node.js, bootstrap 5.3.3, nodemailer
+3. Configure Gmail for sending emails from your booking form
+    - Sign into your Google Account and goto https://myaccount.google.com/security
+    - Ensure you have set up 2-Step Verification 
+    - Once you have set up 2-step verification, go to the App Passwords section on the 2-step Verification page 
+    - Create a new App Password named 'nodemailer'
+    - The App Password is a 16 character code e.g., abcd efgh ijkl mnop
+    - Copy the App Password
+    - In VS Studio, create a .env file on in your project root folder 
+    - Enter your GMail email address and App Password 
+      e.g. 
+      GMAIL_USER=your-email@gmail.com
+      GMAIL_PASS=abcd efgh ijkl mnop  
+    
 4. Start the Nodemailer Server
     - Navigate to the Javascript folder: 
       -- type cd JS in terminal
