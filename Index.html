@@ -16,40 +16,86 @@
   
   <nav class="navbar navbar-expand-lg bg-black">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/Index.html">Flavour & Finesse</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" 
+        href="/Index.html">Flavour & Finesse
+      </a>
+      <button class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" 
+        id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/Index.html">Home</a>
+            <a class="nav-link active" 
+              aria-current="page" 
+              href="/Index.html" 
+              aria-label="Go to Home Page">Home
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/our-story.html">Our Story</a>
+            <a class="nav-link" 
+              href="/our-story.html" 
+              aria-label="Go to the Our Story Page">Our Story
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/menu.html">Menu</a>
+            <a class="nav-link" 
+              href="/menu.html" 
+              aria-label="Go to the Menu Page">Menu
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/bookingform.html">Book a table</a>
+            <a class="nav-link" 
+              href="/bookingform.html" 
+              aria-label="Go to the Book a Table Page">Book a table
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contact-us.html">Contact Us</a>
+            <a class="nav-link" 
+              href="/contact-us.html"
+              aria-label="Go to the Contact Us Page">Contact Us
+            </a>
           </li>
         </ul>
        </div>
     </div>
   </nav>
+
   
- <div class="top-container">  
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+ <div class="top-container">
+      <!-- Carousel with 3 slides. Each slide has a different image and a caption with a heading, subheading and a button. -->  
+      <div id="homePageCarousel" 
+        class="carousel slide" 
+        data-bs-ride="carousel" 
+        data-bs-interval="6000"> <!-- 6 second interval between slides -->
+        <div class="carousel-indicators"> <!-- Carousel navigation buttons -->
+          <button type="button" 
+            data-bs-target="#homePageCarousel" 
+            data-bs-slide-to="0" 
+            class="active" 
+            aria-current="true" 
+            aria-label="Slide 1: Waitress serving happy diners in a restaurant. Includes a 'Book a Table' button.">
+          </button>
+          <button type="button" 
+            data-bs-target="#homePageCarousel" 
+            data-bs-slide-to="1" 
+            aria-label="Slide 2: 2 glasses of pink gin with love hearts attached advertising Valentines Day. Includes a 'Book a Table' button."
+            aria-hidden="true">
+          </button>
+          <button type="button" 
+            data-bs-target="#homePageCarousel" 
+            data-bs-slide-to="2" 
+            aria-label="Slide 3: A plate of delicious food. Includes a 'View our menu' button."
+            aria-hidden="true">
+          </button>
         </div>
-        <div class="carousel-inner">
+        <div class="carousel-inner" aria-live="polite"> <!-- aria-polite makes on screen reader announce when new slide appears-->
           <div class="carousel-item active">
             <img src="/Images/Restaurant_Full_Page.png" class="d-block w-100" alt="Waitress serving happy diners at table in restaurant">
             <div class="carousel-caption"> <!-- Black semi transparent background applied to make text and button stand out ensuring picture doesn't obscure text -->
@@ -75,13 +121,23 @@
             </div>
           </div>
         </div>
-        <!-- Carousel navigation buttons -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <!-- Carousel navigation arrows -->
+        <button class="carousel-control-prev" 
+          type="button" 
+          data-bs-target="#homePageCarousel" 
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" 
+            aria-hidden="true">
+          </span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <button class="carousel-control-next" 
+          type="button" 
+          data-bs-target="#homePageCarousel" 
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" 
+          aria-hidden="true">
+          </span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>

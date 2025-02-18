@@ -5,16 +5,16 @@ h1 {
 
 .contact-container p {
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.678);
+  color: white;
 }
 
 .contact-container a[href^="mailto"] {
   text-decoration: none !important;
-  color: rgba(255, 255, 255, 0.678);
+  color: rgb(241, 10, 191);
 }
 
 a[href^="mailto"]:hover {
-  color: rgb(241, 10, 191);
+  color:white;
 }
 
 

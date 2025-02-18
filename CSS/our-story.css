@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   font-size: larger;
-  color: rgba(255, 255, 255, 0.678);
+  color: white;
 }
 
 h1 {
@@ -29,7 +29,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-
+/* Text and image elements will be placed in the correct columns */
 .story-text {
   grid-column: 1 / 3;
   padding-right: 30px;
@@ -154,62 +154,62 @@ h1 {
     order: -1; /* Moves the image below the text */
   }
 
-  @media (max-width: 768px) {
-    .story-row {
-      display: flex;
-      flex-direction: column;
-      align-items: center; 
-      text-align: center; 
-      padding: 10px;
-    }
-  
-    .story-text, .chef-text, .fresh-produce-text {
-      padding-right: 0;
+ 
+  .story-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    padding: 10px;
+  }
+
+  .story-text, .chef-text, .fresh-produce-text {
+    padding-right: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .story-image, .chef-image, .fresh-produce-image {
+    order: -1; /* Moves the image above the text */
+    width: 100%;
+    max-width: 400px;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInDown 1s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
       opacity: 0;
       transform: translateY(30px);
-      animation: fadeInUp 1s ease-out forwards;
     }
-  
-    .story-image, .chef-image, .fresh-produce-image {
-      order: -1; /* Moves the image above the text */
-      width: 100%;
-      max-width: 400px;
-      opacity: 0;
-      transform: translateY(-30px);
-      animation: fadeInDown 1s ease-out forwards;
-    }
-  
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  
-    /* Add staggered effect */
-    .story-text, .chef-text, .fresh-produce-text {
-      animation-delay: 0.2s;
-    }
-  
-    .story-image, .chef-image, .fresh-produce-image {
-      animation-delay: 0.4s;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Add staggered effect */
+  .story-text, .chef-text, .fresh-produce-text {
+    animation-delay: 0.2s;
+  }
+
+  .story-image, .chef-image, .fresh-produce-image {
+    animation-delay: 0.4s;
+  }
 }
+
+
 

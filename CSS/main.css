@@ -17,7 +17,8 @@ h1 {
   color: rgb(241, 10, 191) !important;
 }
 
-.navbar-brand:hover {
+.navbar-brand:hover,
+.navbar-brand:focus {
   color: rgb(241, 10, 191) !important; /* Ensures color remains pink on hover */
 }
 
@@ -53,6 +54,10 @@ h1 {
 .carousel-inner img {
   max-height: 700px;
   object-fit: cover; /* Ensures the image covers the entire carousel */
+}
+
+.carousel-indicators button:focus-visible {
+  outline: 2px solid rgb(241, 10, 191); /* High contrast focus indicator */
 }
 
 .carousel-caption {
@@ -142,17 +147,17 @@ footer {
 } 
 
 .footer-column ul li a { 
-  color: white !important; 
+  color:white !important; 
   text-decoration:none; 
   transition: color 0.3s; 
 } 
 
 .footer-column a:hover { 
-  color: rgb(241, 10, 191);
+  color: white;
 }
 
 .footer-column a{
-  color: white;
+  color: rgb(241, 10, 191);
 }
 
 a {

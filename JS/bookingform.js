@@ -21,6 +21,7 @@ document.getElementById('bookingForm').addEventListener('submit', async function
       if (response.ok) {
           document.getElementById('confirmationMessage').innerText = 'Thank you for submitting your booking. We will be in touch shortly to confirm!';
           document.getElementById('confirmation').style.display = 'block';
+          document.getElementById('confirmation').focus(); 
           document.getElementById('bookingForm').reset(); // Clears the form after it is submitted
       } else {
           console.error('Error:', result);
