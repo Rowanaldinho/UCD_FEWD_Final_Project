@@ -24,7 +24,7 @@ h1 {
 
 .navbar-nav .nav-link:focus, 
 .navbar-nav .nav-link:hover {
-  color: white !important; /* Change to white on focus or hover */
+  color: rgb(255, 255, 255) !important; /* Change to white on focus or hover */
   background-color: rgb(241, 10, 191) !important; /* Pink background */
   border-radius: 5px;
   padding: 5px 10px; /* Adds spacing for a better look */
@@ -174,19 +174,23 @@ a {
 
   .carousel-caption {
     bottom: 5%;
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
     padding: 8px 12px;
   }
 
+  .carousel-caption h3 {
+    font-size: 1.2rem !important; /* Reduce heading size */
+  }
+
   .carousel-caption h5 {
-    font-size: 1.5rem; /* Smaller heading on smaller screens */
+    font-size: 1.5rem !important; /* Smaller heading on smaller screens */
   }
 
   .carousel-caption p {
-    font-size: 1rem; /* Smaller paragraph text */
+    font-size: 1rem !important; /* Smaller paragraph text */
   }
 
-  .carousel-caption .btn {
+  .carousel-caption button {
     font-size: 0.9rem; /* Smaller button text */
     padding: 8px 15px; /* Smaller padding for the button */
   }
