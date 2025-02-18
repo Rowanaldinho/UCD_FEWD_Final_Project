@@ -96,7 +96,7 @@ h1 {
 .carousel-caption button:active {
   transform: scale(0.9); /* Slight shrink effect */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) inset; /* Inner shadow effect */
-  background-color: rgba(255, 255, 255, 0.678) !important; /*Change button colour to grey*/
+  background-color: white!important; /*Change button colour to white*/
   color: rgb(241, 10, 191); /* Flip text color to pink */
 }
 
