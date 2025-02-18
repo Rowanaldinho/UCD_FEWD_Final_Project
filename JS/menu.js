@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 <div class="card m-3" style="width: 18rem;">  
                     <img src="${category.strCategoryThumb}" class="card-img-top" alt="${category.strCategory}">
                     <div class="card-body">
-                        <h5 class="card-title">${category.strCategory}</h5>
+                        <h4 class="card-title">${category.strCategory}</h4>
                         <p class="card-text">${category.strCategoryDescription.substring(0, 100)}...</p>
                     </div>
                 </div>

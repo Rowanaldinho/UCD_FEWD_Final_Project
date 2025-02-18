@@ -7,9 +7,9 @@ h1 {
 }
 
 .navbar {
-  background-color: black !important;
-  border: none !important;
-  padding-bottom: 20px !important;
+  background-color: black;
+  border: none;
+  padding-bottom: 20px;
   margin-top: 10px;
 }
 
@@ -17,30 +17,42 @@ h1 {
   color: rgb(241, 10, 191) !important;
 }
 
+.navbar-brand:hover {
+  color: rgb(241, 10, 191) !important; /* Ensures color remains pink on hover */
+}
+
+.navbar-nav .nav-link:focus, 
+.navbar-nav .nav-link:hover {
+  color: white !important; /* Change to white on focus or hover */
+  background-color: rgb(241, 10, 191) !important; /* Pink background */
+  border-radius: 5px;
+  padding: 5px 10px; /* Adds spacing for a better look */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
 .navbar .navbar-brand {
   font-weight:lighter;
-  color: rgb(241, 10,191) !important;
+  color: rgb(241, 10,191);
   font-family: "Sofia", sans-serif;
   font-size: xx-large;
 }
 
 .navbar-toggler-icon {
-  background-color: rgb(241, 10, 191); /* Pink color */
+  background-color: rgb(241, 10, 191); /* Changes burger menu to pink color to tie in with theme of site*/
 }
 
 .top-container {
-  padding-bottom: 100px;
+  padding-bottom: 100px; /* Adds padding between carousel and footer */
   height: auto;
 }
 
 .carousel {
   max-height: 700px;
-  object-fit: cover;
 }
 
 .carousel-inner img {
   max-height: 700px;
-  object-fit: cover;
+  object-fit: cover; /* Ensures the image covers the entire carousel */
 }
 
 .carousel-caption {
@@ -51,11 +63,6 @@ h1 {
   padding: 15px;
   border-radius: 10px; 
   display: inline-block; /* Keeps background only behind text */
-}
-
-.carousel-caption h2 {
-  font-size: 2rem; /* Larger font for headings */
-  font-weight: bold;
 }
 
 .carousel-caption h3 {
@@ -70,16 +77,22 @@ h1 {
 } 
 
 .carousel-caption button {
-  background-color: rgb(241, 10, 191) !important; /* Pink background */
-  color: white; /* White text */
-  border: none; /* No border */
+  background-color: rgb(241, 10, 191) !important; 
+  color: white; 
+  border: none; 
   padding: 10px 20px; /* Padding around text */
   margin-top: 20px; /* Spacing above button */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem; /* Larger text size */
   font-weight: bold; /* Bold text */
-  text-transform: uppercase; /* Uppercase text */
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 5px; 
+}
+
+.carousel-caption button:active {
+  transform: scale(0.9); /* Slight shrink effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) inset; /* Inner shadow effect */
+  background-color: rgba(255, 255, 255, 0.678) !important; /*Change button colour to grey*/
+  color: rgb(241, 10, 191); /* Flip text color to pink */
 }
 
 footer { 
