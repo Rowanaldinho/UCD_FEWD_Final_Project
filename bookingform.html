@@ -8,62 +8,113 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   
   <title>Flavour & Finesse - Book a table</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-black">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Flavour & Finesse</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" 
+        href="/Index.html">Flavour & Finesse
+      </a>
+      <button class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" 
+        id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/Index.html">Home</a>
+            <a class="nav-link active" 
+              aria-current="page" 
+              href="/Index.html" 
+              aria-label="Go to Home Page">Home
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/our-story.html">Our Story</a>
+            <a class="nav-link" 
+              href="/our-story.html" 
+              aria-label="Go to the Our Story Page">Our Story
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/menu.html">Menu</a>
+            <a class="nav-link" 
+              href="/menu.html" 
+              aria-label="Go to the Menu Page">Menu
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/bookingform.html">Book a table</a>
+            <a class="nav-link" 
+              href="/bookingform.html" 
+              aria-label="Go to the Book a Table Page">Book a table
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+              href="/contact-us.html"
+              aria-label="Go to the Contact Us Page">Contact Us
+            </a>
           </li>
         </ul>
        </div>
     </div>
   </nav>
+
   <div class="main-container">
-    <div class="box"><img src="/Images/Restaurant_Table.png"alt="Restaurant Table"></div>
+    <div class="box"><img src="/Images/Restaurant_Table.png"alt="Restaurant table with place settings and 4 clean empty wineglasses. Restaurant guests in background"></div>
     <div class="box">
       <div class="booking-container">
         <form id="bookingForm" method="post" action="http://localhost:5000/send-booking-email">
           <h1 class="booking-title">Book a Table</h1>
-          <label for="name">Name:</label>
-          <input type="text" id="name" required><br>
-  
-          <label for="email">Email:</label>
-          <input type="email" id="email" required><br>
-  
-          <label for="phone">Phone:</label>
-          <input type="tel" id="phone" required><br>
-  
-          <label for="date">Date:</label>
-          <input type="date" id="date" required><br>
-  
-          <label for="time">Time:</label>
-          <input type="time" id="time" required><br>
-  
-          <label for="guests">Number of Guests:</label>
-          <input type="number" id="guests" min="1" required><br>
-  
-          <button type="submit">Book Now</button>
+          <label for="name">Name:
+          </label>
+          <input type="text" 
+            id="name" 
+            name="name" 
+            required><br>
+          <label for="email">Email:            
+          </label>
+          <input type="email" 
+            id="email" 
+            name="email" 
+            required><br>  
+          <label for="phone">Phone:            
+          </label>
+          <input type="tel" 
+            id="phone" 
+            name="phone" 
+            required><br>  
+          <label for="date">Date:            
+          </label>
+          <input type="date" 
+            id="date" 
+            name="date" 
+            required><br>  
+          <label for="time">Time:            
+          </label>
+          <input type="time" 
+            id="time" 
+            name="time" 
+            required><br>  
+          <label for="guests">Number of Guests:
+          </label>
+          <input type="number" 
+            id="guests" 
+            name="guests" 
+            min="1" 
+            required><br>  
+          <button type="submit">Book Now            
+          </button>
         </form>
-        <div id="confirmation" style="display:none;">
+        <div id="confirmation" 
+            style="display:none;" 
+            aria-live="assertive"> <!-- aria-live makes screen reader announce confirmation message -->
           <h2>Booking Confirmation</h2>
           <p id="confirmationMessage"></p>
         </div>
@@ -74,22 +125,24 @@
 </body>
 <footer>
   <div class="footer-container">
-    <div class="footer-column"> 
+    <div class="footer-column">
       <h1>Flavour & Finesse</h1>
-    </div> 
-    
-    <div class="footer-column"> 
-      <h4>Opening hours:</h4> 
-      <p>Monday – Thursday: 8:30am – 4:30pm
-        Friday & Saturday: 8:30am – 4:00pm & 5:30pm – 10:00pm</p>
-    </div> 
-              
-    <div class="footer-column"> 
-      <h4>Contact Us</h4> 
-      <p>Email: <a href="mailto:rowan.dardis@outlook.com">rowan.dardis@outlook.com</a></p> 
-      <p>Phone: 01234 567890</p> 
     </div>
- 
+    <div class="footer-column">
+      <h4>Opening Hours:</h4>
+      <p>Monday – Thursday: 8:30am – 4:30pm</p>
+      <p>Friday & Saturday: 8:30am – 4:00pm & 5:30pm – 10:00pm</p>
+    </div>
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p>Email: <a href="mailto:rowan.dardis@outlook.com">rowan.dardis@outlook.com</a></p>
+      <p>Phone: 01 6033269</p>
+    </div>
+    <div class="footer-column">
+      <h4>Address</h4>
+      <p>Fair Green,<br> Navan,<br> Co. Meath.
+      </p>
+    </div>
   </div>
 </footer>
 </html>

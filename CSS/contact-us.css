@@ -1,0 +1,44 @@
+h1 {
+  color: rgb(241, 10, 191) !important;
+  font-family: "Sofia", sans-serif !important;
+}
+
+.contact-container p {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.contact-container a[href^="mailto"] {
+  text-decoration: none !important;
+  color: rgb(241, 10, 191);
+}
+
+a[href^="mailto"]:hover {
+  color:white;
+}
+
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  justify-content: center !important;
+  align-items: center !important;
+  min-height: 100vh;
+  text-align: center;
+  margin: 0;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+}
+
+iframe {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+
+
+
+
+  

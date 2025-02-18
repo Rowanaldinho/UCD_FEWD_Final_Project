@@ -1,0 +1,30 @@
+h2 {
+  font-family: "Sofia", sans-serif !important;
+  color:rgb(241, 10, 191) !important;
+}
+
+.card p {
+  color: white !important;
+}
+
+h4 {
+  color: rgb(241, 10, 191) !important;
+  font-family: "Sofia", sans-serif !important;
+}
+
+.card {
+  background-color: #111 !important; 
+  border-radius: 15px;
+  border: none; 
+}
+
+.card:hover {
+  transform: scale(1.05); /* Makes the card pop out when mouse arrow hovers over it*/
+}
+
+.card-body {
+  background-color: black !important; 
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+}

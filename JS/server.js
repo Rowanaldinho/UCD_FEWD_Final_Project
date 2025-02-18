@@ -1,13 +1,20 @@
 require('dotenv').config();
 const express = require('express');
-const sgMail = require('@sendgrid/mail');
+const nodemailer = require('nodemailer');
 const cors = require('cors');
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+// Create a transporter object using Gmail's SMTP
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.GMAIL_USER, // Your Gmail address
+        pass: process.env.GMAIL_PASS, // Your Gmail app password
+    },
+});
 
 // Function to format date to dd/mm/yyyy
 function formatDateToEuropeanFormat(dateString) {
@@ -24,9 +31,10 @@ app.post('/send-booking-email', async (req, res) => {
 
     const formattedDate = formatDateToEuropeanFormat(date); // Format the date here
 
+    // Email to the owner
     const msgToOwner = {
         to: 'rowan.dardis@outlook.com',  // Replace with recipient email
-        from: 'flavourandfinesse.booking@gmail.com',  // Must be a verified sender in SendGrid
+        from: process.env.GMAIL_USER,  // Your Gmail address (must be the same as in the transporter)
         subject: 'New Table Booking Request',
         text: `Booking Details:\n
                Name: ${name}\n
@@ -37,9 +45,10 @@ app.post('/send-booking-email', async (req, res) => {
                Number of Guests: ${guests}`,
     };
 
+    // Email to the user
     const msgToUser = {
         to: email, // User's email (email they submitted on the form)
-        from: 'flavourandfinesse.booking@gmail.com', // Same verified sender email
+        from: process.env.GMAIL_USER, // Same Gmail address
         subject: 'Booking Confirmation',
         text: `Hello ${name},\n\n
                Your booking has been confirmed!\n
@@ -51,16 +60,18 @@ app.post('/send-booking-email', async (req, res) => {
     };
 
     try {
-        // Send email to restaurant owner
-        await sgMail.send(msgToOwner);
-        // Send confirmation email to user
-        await sgMail.send(msgToUser);
+        // Send the email to the owner and the user
+        await transporter.sendMail(msgToOwner);
+        await transporter.sendMail(msgToUser);
         res.status(200).send("Booking email sent successfully!");
     } catch (error) {
-        console.error("Error sending email:", error.response ? error.response.body : error.message);
-        res.status(500).send("Error sending email.");
+        console.error("Error sending email:", error);
+        res.status(500).json({
+            message: "Error sending email.",
+            error: error.message,
+        });
     }
-});
+}); 
 
 app.listen(5000, () => {
     console.log('Server running on port 5000');
