@@ -34,20 +34,24 @@ height: auto;
 
 .booking-container {
   display: flex;
-  justify-content: flex-start !important;
+  justify-content: center !important;
   align-items: center !important;
   margin: 0 !important;
   flex-direction: column;
 }
 
 .booking-container button {
-  background-color: rgb(241, 10, 191);
+  display: block;
+  margin: 0 auto;
+  background-color: #222;
   color: white;
+  border: solid rgb(241, 10, 191) !important;
+  width: 60%;
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   transition: all 0.2s ease-in-out; /* Add smooth transition effect */
 }
