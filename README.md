@@ -82,5 +82,5 @@ Steps to Run the Project
       -- type cd JS in terminal
     - Run the server
       -- type node server.js in terminal
-5. Open the bookingform.html in Live server(VS Code) and complete and submit a booking 
+5. Open the bookingform.html in Live server(VS Code) and complete and submit a booking. 
 
