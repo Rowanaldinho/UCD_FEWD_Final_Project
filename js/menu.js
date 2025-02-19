@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         const data = await response.json();
         const categories = data.categories;
 
-        let menuHtml = "<h2 class='text-center mt-4'>Our Menu</h2><div class='d-flex flex-wrap justify-content-center'>";
+        let menuHtml = "<h1 class='text-center mt-4'>Our Menu</h1><div class='d-flex flex-wrap justify-content-center'>";
 
         categories.forEach(category => {
             menuHtml += `
