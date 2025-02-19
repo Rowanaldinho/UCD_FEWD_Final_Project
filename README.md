@@ -4,7 +4,7 @@ Project Title
 Restaurant Website for a restaurant named 'Flavour & Finesse'
 
 Description
-This is a responsive restaurant website that features a modern design using Bootstrap 5.3.3 for the navigation menu and a carousel on the home page. Additionally, it includes a table booking system powered by Nodemailer and SendGrid, allowing users to make reservations online. The Menu page links to the Mealdb API
+This is a responsive restaurant website that features a modern design using Bootstrap 5.3.3 for the navigation menu and a carousel on the home page. Additionally, it includes a table booking system powered by Nodemailer and GMail, allowing users to make reservations online. The Menu page links to the Mealdb API
 
 Features
 
