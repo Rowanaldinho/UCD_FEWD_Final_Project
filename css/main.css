@@ -39,7 +39,7 @@ h1 {
 }
 
 .navbar-toggler-icon {
-  background-color: rgb(241, 10, 191); /* Changes burger menu to pink color to tie in with theme of site*/
+  background-color: rgb(241, 10, 191); /* Changes burger menu to pink color to tie in with theme of site */
 }
 
 .top-container {
@@ -52,8 +52,10 @@ h1 {
 }
 
 .carousel-inner img {
-  max-height: 700px;
-  object-fit: cover; /* Ensures the image covers the entire carousel */
+  width: 100%; /* Ensures image is responsive */
+  height: auto; /* Maintains aspect ratio */
+  max-height: 700px; 
+  object-fit: cover; /* Prevents distortion of image */
 }
 
 .carousel-indicators button:focus-visible {
