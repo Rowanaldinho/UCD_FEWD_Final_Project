@@ -8,7 +8,7 @@ This is a responsive restaurant website that features a modern design using Boot
 
 Features
 
-- Responsive navigation menu built with Bootstrap 5.3.3
+- Responsive navigation menu built with Bootstrap 5.3.3.
 - Interactive carousel on the home page.
 - Menu Page that dynamically displays menu items using the MealsDB API.
 - Book a Table form that captures user details and sends reservation requests.
