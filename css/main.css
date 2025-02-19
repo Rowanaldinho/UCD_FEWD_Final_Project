@@ -84,9 +84,9 @@ h1 {
 } 
 
 .carousel-caption button {
-  background-color: rgb(241, 10, 191) !important; 
-  color: white; 
-  border: none; 
+  background-color: #222; 
+  color: #ffffff; 
+  border: solid rgb(241, 10, 191); 
   padding: 10px 20px; /* Padding around text */
   margin-top: 20px; /* Spacing above button */
   font-family: Arial, Helvetica, sans-serif;
