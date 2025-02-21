@@ -86,7 +86,8 @@ Steps to Run the Project
 5. Open the bookingform.html in Live server(VS Code) and complete and submit a booking. 
 
 Project Links
-Description	Link
+
+
 Project Website - GitPages	https://rowanaldinho.github.io/UCD_FEWD_Final_Project/ 
 
 Github Repository -	https://github.com/Rowanaldinho/UCD_FEWD_Final_Project 
