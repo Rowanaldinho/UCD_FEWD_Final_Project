@@ -85,3 +85,16 @@ Steps to Run the Project
 
 5. Open the bookingform.html in Live server(VS Code) and complete and submit a booking. 
 
+Project Links
+Description	Link
+Project Website - GitPages	https://rowanaldinho.github.io/UCD_FEWD_Final_Project/ 
+
+Github Repository -	https://github.com/Rowanaldinho/UCD_FEWD_Final_Project 
+
+Figma Page -	https://www.figma.com/design/ZpIgpEfYU0A1UnnQXmkab3/Flavour-%26-Finesse?node-id=0-1&m=dev&t=RbyIi1ysxXMBpnD7-1 
+
+Youtube - Presentation video	https://youtu.be/GwzYcbhdbck 
+
+
+
+
