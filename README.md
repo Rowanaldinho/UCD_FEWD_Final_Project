@@ -96,6 +96,10 @@ Figma Page -	https://www.figma.com/design/ZpIgpEfYU0A1UnnQXmkab3/Flavour-%26-Fin
 
 Youtube - Presentation video	https://youtu.be/GwzYcbhdbck 
 
+Final Project Description(Word Document) - https://1drv.ms/w/c/af08994940c6055f/EXR9bqYoGTdCr6xwQE8nXy8Bs6b1diw3d_QKTxPol5_tTg?e=e51osi
+
+Important Note re: Booking Form functionality: https://1drv.ms/w/c/af08994940c6055f/EemGcxTEqv1Et6Eyw56PKpQBdNYqMCHpXGx6BQgBMX7jBQ?e=rfrExv
+
 
 
 
